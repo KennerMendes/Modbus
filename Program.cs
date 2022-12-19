@@ -375,13 +375,6 @@ namespace ModbusClass
         static void Main(string[] args)
         {
             ModbusSlave modSlave = new ModbusSlave("COM4", 1200, 1);
-            string sPointAtual = modSlave.ReadHoldingRegister(2).ToString();
-            Console.WriteLine("O SetPoint Atual é " + sPointAtual + "\n");
-            Console.WriteLine("Digite o SetPoint");
-            ushort sPoint = UInt16.Parse(Console.ReadLine());
-            modSlave.WriteSingleRegister(2, sPoint);
-            string temp = modSlave.ReadInputRegister(1).ToString();
-            Console.WriteLine("A temperatura atual é " + temp);
-        }
+            //TODO
     }
 }
